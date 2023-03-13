@@ -1,14 +1,32 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <HeadContent/>
+    <BodyContent/>
+    <CateContent/>
+    <MainIndex/>
   </div>
 </template>
 
 <script>
+import BodyContent from "@/components/body/BodyContent";
+import HeadContent from "@/components/head/HeadContent";
+import CateContent from "@/components/left/CateContent";
+import MainIndex from "@/components/main/MainIndex";
+
 export default {
   name: 'HelloWorld',
+  components: {MainIndex, CateContent, HeadContent, BodyContent},
   props: {
     msg: String
+  },
+  methods: {
+    alert: function (event) {
+      alert("提示方法")
+      if (event) {
+        alert(event.target.toString())
+      }
+
+    }
   }
 }
 </script>
@@ -18,14 +36,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
