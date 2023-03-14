@@ -2,9 +2,9 @@
   <div>
     <div>
       <form>
-        <label><input name="device_platform" type="radio" value="Android"/> Android </label>
+        <label><input name="device_platform" type="radio" value="Android"/> Android <svg-icon icon-class="android" /> </label>
         <label><input name="device_platform" type="radio" value="iOS"/>
-          <SvgIOS/>
+          <svg-icon icon-class="iOS" />
         </label>
       </form>
     </div>
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import SvgIOS from '../../assets/svg/iOS.svg'
 
+import SvgIcon from "@/SvgIcon";
 export default {
   name: "HeadContent",
-  components: {SvgIOS},
+  components: {SvgIcon},
   props: {
     tableLabel: {}
   }
