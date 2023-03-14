@@ -1,9 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
+import '@/assets/icons'  // 导入图标资源
+import 'SvgIcon/index.js'
+import SvgIcon from 'SvgIcon/index'
 
-import 'components/SvgIcon/index.js'
-import SvgIcon from 'components/SvgIcon/index'
-
-App.component('svg-icon', SvgIcon)
-
-createApp(App).mount('#app')
+createApp(App).component('svg-icon', SvgIcon).mount('#app')
