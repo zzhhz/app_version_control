@@ -13,11 +13,16 @@ import HeadContent from "@/components/head/HeadContent";
 import CateContent from "@/components/left/CateContent";
 import MainIndex from "@/components/main/MainIndex";
 
+
 export default {
   name: 'HelloWorld',
   components: {MainIndex, CateContent, HeadContent, BodyContent},
   props: {
     msg: String
+  },
+  data(){
+    return {
+    }
   },
   methods: {
     alert: function (event) {
