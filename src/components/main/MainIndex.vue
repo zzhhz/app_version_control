@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div class="main-back">
+    <p class="main-text">this is main</p>
+  </div>
 </template>
 
 <script>
@@ -9,5 +11,11 @@ export default {
 </script>
 
 <style scoped>
+.main-back{
+  background: #1a1a1a;
+}
+.main-text{
+  color: white;
+}
 
 </style>

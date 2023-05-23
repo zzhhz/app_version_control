@@ -1,58 +1,20 @@
-<template>
-  <div class="hello">
-    <HeadContent/>
-    <BodyContent/>
-    <CateContent/>
-    <MainIndex/>
-  </div>
-</template>
+<script setup lang="ts">
+import {ref} from 'vue'
+import SvgIcon from './SvgIcon/index.vue'
+defineProps<{ msg: string, components: { SvgIcon } }>()
 
-<script>
-import BodyContent from "@/components/body/BodyContent";
-import HeadContent from "@/components/head/HeadContent";
-import CateContent from "@/components/left/CateContent";
-import MainIndex from "@/components/main/MainIndex";
-
-
-export default {
-  name: 'HelloWorld',
-  components: {MainIndex, CateContent, HeadContent, BodyContent},
-  props: {
-    msg: String
-  },
-  data(){
-    return {
-    }
-  },
-  methods: {
-    alert: function (event) {
-      alert("提示方法")
-      if (event) {
-        alert(event.target.toString())
-      }
-
-    }
-  }
-}
+const count = ref(0)
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<template>
+  <h1>{{ msg }}</h1>
+  <svg-icon iconName="android" width="72" height="72" color="#ff0000" />
+  <svg-icon iconName="iOS" width="72" height="72" color="#ff0000" />
+</template>
+
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.read-the-docs {
+  color: #888;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>

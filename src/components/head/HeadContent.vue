@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="main-head">
     <div>
       <form>
-        <label><input name="device_platform" type="radio" value="Android"/> Android <svg-icon icon-class="android" /> </label>
+        <label><input name="device_platform" type="radio" value="Android"/> Android <svg-icon icon-name="android" /> </label>
         <label><input name="device_platform" type="radio" value="iOS"/>
 <!--          <svg-icon icon-class="iOS" />-->
-          <iosSvg width="60" height="60" color="#00ff00"></iosSvg>
+          <svg-icon width="60" height="60" color="#00ff00"  icon-name="iOS"/>
         </label>
       </form>
     </div>
@@ -19,22 +19,28 @@
 </template>
 
 <script>
-import iosSvg from '@/components/svg/iosSvg'
-import SvgIcon from "@/SvgIcon";
+
+import SvgIcon from '../SvgIcon/index.vue'
 export default {
   name: "HeadContent",
-  components: {SvgIcon,iosSvg},
+  components: {SvgIcon},
   props: {
     tableLabel: {}
   },
   data(){
     return {
-      iosSvg: iosSvg
+
     }
   }
 }
 </script>
 
 <style scoped>
-
+.main-head{
+  background: #646cff;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+}
 </style>
