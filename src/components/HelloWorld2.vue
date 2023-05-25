@@ -2,18 +2,14 @@
 <script setup lang="ts">
 import BodyContent from "./body/BodyContent.vue";
 import HeadContent from "./head/HeadContent.vue";
-import CateContent from "./left/CateContent.vue";
-import MainIndex from "./main/MainIndex.vue";
 
-defineProps<{ msg: string, components: { BodyContent, HeadContent, CateContent, MainIndex } }>();
+defineProps<{ msg: string, components: { BodyContent, HeadContent } }>();
 
 </script>
 <template>
   <div class="all">
     <HeadContent/>
     <BodyContent/>
-    <CateContent/>
-    <MainIndex/>
   </div>
 </template>
 
@@ -21,7 +17,11 @@ defineProps<{ msg: string, components: { BodyContent, HeadContent, CateContent, 
 
 <style scoped>
 .all {
-  flex: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  float: left;
 }
 
 </style>

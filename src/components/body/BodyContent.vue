@@ -13,6 +13,8 @@ export default {
 <style scoped>
   .body-content{
     background: #2c3e50;
+    width: 100%;
+    height: 100%;
   }
   .body-text{
     color: #f9f9f9;
