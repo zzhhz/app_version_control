@@ -2,7 +2,7 @@
   <div>
     <div>
       <form>
-        <label><input name="device_platform" type="radio" value="Android"/> Android <svg-icon icon-class="android" /> </label>
+        <label><input name="device_platform" type="radio" value="Android"/> Android <svg-icon name="android" /> </label>
         <label><input name="device_platform" type="radio" value="iOS"/>
 <!--          <svg-icon icon-class="iOS" />-->
           <iosSvg width="60" height="60" color="#00ff00"></iosSvg>
@@ -20,10 +20,11 @@
 
 <script>
 import iosSvg from '@/components/svg/iosSvg'
-import SvgIcon from "@/SvgIcon";
+import SvgIcon from "@/SvgIcon/index.vue";
+
 export default {
   name: "HeadContent",
-  components: {SvgIcon,iosSvg},
+  components: {SvgIcon, iosSvg},
   props: {
     tableLabel: {}
   },
