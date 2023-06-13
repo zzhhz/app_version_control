@@ -17,7 +17,7 @@
 {"test":"123","person":{"username":"张三","age":33}, "follow":["篮球","足球"], "edu":[{"eduBefore":"小学","className":"一班级"},{"eduBefore":"小学","className":"一班级"},{"eduBefore":"小学","className":"一班级"}]}
 * */
 import "vue3-json-viewer/dist/index.css";
-import {JsonViewer} from "../json-viewer.vue";
+import {JsonViewer} from "vue3-json-viewer";
 import {getTypeOf} from "@/utils/JsonUtils";
 
 export default {
@@ -127,11 +127,17 @@ export default {
 .right-div-text {
   height: 100%;
   width: 100%;
+  max-height: 100%;
   text-align: left;
 }
 .jv-key {
   color: #92278f;
 
+}
+.jv-code {
+  &-jv-box{
+    max-height: 100%;
+  }
 }
 button {
   cursor: pointer;
