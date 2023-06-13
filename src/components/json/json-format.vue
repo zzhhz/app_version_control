@@ -17,7 +17,7 @@
 {"test":"123","person":{"username":"张三","age":33}, "follow":["篮球","足球"], "edu":[{"eduBefore":"小学","className":"一班级"},{"eduBefore":"小学","className":"一班级"},{"eduBefore":"小学","className":"一班级"}]}
 * */
 import "vue3-json-viewer/dist/index.css";
-import {JsonViewer} from "vue3-json-viewer";
+import {JsonViewer} from "../json-viewer.vue";
 import {getTypeOf} from "@/utils/JsonUtils";
 
 export default {
