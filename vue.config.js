@@ -19,5 +19,21 @@ module.exports = defineConfig({
             }).end()
             .use('svgo-loader')
             .loader('svgo-loader')
+    },
+    devServer: {
+        open: false, // 是否打开浏览器;
+        port: 8080,
+        proxy: {
+            '/fast': {
+                target: "http://localhost:8080/",
+                changeOrigin: true,
+                ws: false,
+                secure: false,
+                pathRewrite: {
+                    '^/fast': ''
+                }
+            },
+
+        },
     }
 });
